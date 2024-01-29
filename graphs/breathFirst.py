@@ -1,20 +1,20 @@
-graph ={
+graph = {
     'a': ['b', 'c'],
-    'b':['d'],
-    'c':['e'],
-    'd':['f'],
-    'e':[],
-    'f':[]
+    'b': ['d'],
+    'c': ['e'],
+    'd': ['f'],
+    'e': [],
+    'f': []
 }
 
-def breadthFirstPrint(graph, source):
+
+def breadth_first_print(graph_data, source):
     queue = [source]
-    while(len(queue)):
+    while len(queue):
         current = queue.pop(0)
         print(current, end='\n')
-        for neighbor in graph[current]:
+        for neighbor in graph_data[current]:
             queue.append(neighbor)
 
 
-
-breadthFirstPrint(graph=graph, source='a')
+breadth_first_print(graph_data=graph, source='a')
