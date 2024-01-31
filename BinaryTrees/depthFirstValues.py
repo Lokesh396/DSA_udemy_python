@@ -26,13 +26,13 @@ c.right = f
 #  /  \    \
 # d    e    f
 
-
-# def depthFirst(root):
+# Iterative Approach
+# def depth_first(root):
 #     if not root:
 #         return []
 #     result = []
 #     stack = [root]
-#     while(len(stack)):
+#     while len(stack):
 #         current = stack.pop()
 #         result.append(current.val)
 #         if current.right:
@@ -42,6 +42,7 @@ c.right = f
 #     return result
 
 
+# Recursive Approach
 def depth_first(root):
     if not root:
         return []
