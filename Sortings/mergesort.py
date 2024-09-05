@@ -1,6 +1,6 @@
-def merge(arr, p, q, r):
-    left_arr = arr[p:q+1]
-    right_arr = arr[q+1:r+1]
+def merge(arr: list, p: int, q: int, r: int):
+    left_arr = arr[p:q + 1]
+    right_arr = arr[q + 1:r + 1]
     i, j, k = 0, 0, p
     la_len = len(left_arr)
     ra_len = len(right_arr)
@@ -25,14 +25,14 @@ def merge(arr, p, q, r):
         k += 1
 
 
-def merge_sort(arr, p, r):
+def merge_sort(arr: list, p: int, r: int):
     if p < r:
-        q = p + (r-p) // 2
+        q = p + (r - p) // 2
         merge_sort(arr, p, q)
-        merge_sort(arr, q+1, r)
+        merge_sort(arr, q + 1, r)
         merge(arr, p, q, r)
 
 
 inpt_arr = list(map(int, input().split()))
-merge_sort(inpt_arr, 0,  len(inpt_arr)-1)
+merge_sort(inpt_arr, 0, len(inpt_arr) - 1)
 print(f"Sorted Array: {inpt_arr}")

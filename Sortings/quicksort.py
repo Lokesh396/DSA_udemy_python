@@ -36,7 +36,7 @@ class Solution1:
         # code here
         if low < high:
             p = self.partition(arr, low, high)
-            self.quickSort(arr, low, p - 1)
+            self.quickSort(arr, low, p)
             self.quickSort(arr, p + 1, high)
 
     def partition(self, arr, low, high):
